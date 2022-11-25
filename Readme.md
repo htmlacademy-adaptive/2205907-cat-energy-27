@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Дамир Юнусов](https://up.htmlacademy.ru/adaptive/27/user/2205907).
-* Наставник: `Неизвестно`.
+- Студент: [Дамир Юнусов](https://up.htmlacademy.ru/adaptive/27/user/2205907).
+- Наставник: [Дмитрий Гуляев](https://htmlacademy.ru/profile/dima).
 
 ---
 
