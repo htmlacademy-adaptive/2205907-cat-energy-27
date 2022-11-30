@@ -33,91 +33,86 @@
       </div>
     </nav>
   </header>
-  <main class="main-form">
-    <h1 class="main-form__title">Подбор программы</h1>
-    <h2 class="main-form__description">Заполните анкету, и мы подберем
+  <main class="form">
+    <h1 class="form__title">Подбор программы</h1>
+    <h2 class="form__description">Заполните анкету, и мы подберем
       программу питания для вашего кота</h2>
-    <form class="program-request" action="https://echo.htmlacademy.ru/" method="post">
-      <fieldset class="pet-data">
-        <legend class="visually-hidden">Вводные данные кота</legend>
+    <form class="program-form form" action="https://echo.htmlacademy.ru/" method="post">
+      <section class="form__field-group form__field-group--pet">
         <h3 class="visually-hidden">Данные кота</h3>
-        <ul class="pet-data__list">
+        <ul class="form__list">
           <li>
-            <label for="pet-name">Имя:*</label>
-            <input class="pet-data__name-input" type="text" id="pet-name" placeholder="Введите имя кота" required>
+            <label class="form__pet-label" for="pet-name">Имя:*</label>
+            <input class="form__pet-input" type="text" id="pet-name" placeholder="Введите имя кота" required>
           </li>
           <li>
-            <label for="pet-weight">Вес:*</label>
-            <input class="pet-data__weight-input" type="number" id="pet-weight" placeholder="Введите вес кота" required>
+            <label class="form__label" for="pet-weight">Вес:*</label>
+            <input class="form__input" type="number" id="pet-weight" placeholder="Введите вес кота" required>
           </li>
           <li>
-            <label for="pet-age">Возраст:</label>
-            <input class="pet-data__age-input" type="number" id="pet-age" placeholder="Введите возраст кота" required>
+            <label class="form__label" for="pet-age">Возраст:</label>
+            <input class="form__input" type="number" id="pet-age" placeholder="Введите возраст кота" required>
           </li>
         </ul>
-      </fieldset>
-      <fieldset class="program-select">
-        <legend class="visually-hidden">Выбор программы</legend>
+      </section>
+      <section class="form__field-group form__field-group--radios radios">
         <h3 class="visually-hidden">Выбор программы</h3>
-        <ul class="program-select__list">
-          <li class="program-select__item">
-            <input class="select-radio" type="radio" id="weight-loss" name="program-selection">
-            <label class="select-radio-label" for="weight-loss">Похудение</label>
+        <ul class="form__list">
+          <li>
+            <input class="radios__input" type="radio" id="weight-loss" name="program-selection">
+            <label class="radios__label" for="weight-loss">Похудение</label>
           </li>
-          <li class="program-select__item">
-            <input class="select-radio" type="radio" id="weight-gain" name="program-selection">
-            <label class="select-radio-label" for="weight-gain">Набор массы</label>
+          <li>
+            <input class="radios__input" type="radio" id="weight-gain" name="program-selection">
+            <label class="radios__label" for="weight-gain">Набор массы</label>
           </li>
-          <li class="program-select__item">
-            <input class="select-radio" type="radio" id="advise-required" name="program-selection">
-            <label class="select-radio-label" for="advise-required">Не знаю (Нужен ваш совет)</label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="owner-contacts">
-        <legend class="owner-contacts__title">Контактные данные (владельца кота)</legend>
-        <h3 class="visually-hidden">Контактные данные (владельца кота)</h3>
-        <ul class="owner-contacts__list">
-          <li class="owner-contacts__item">
-            <label class="mail-label" for="owner-mail">E-mail:*</label>
-            <input class="owner-contacts__mail" type="email" id="owner-mail" name="owner-mail"
-              placeholder="Введите e-mail">
-          </li>
-          <li class="owner-contacts__item">
-            <label class="tel-label" for="owner-tel">Телефон:*</label>
-            <input class="owner-contacts__tel" type="tel" id="owner-tel" name="owner-tel" placeholder="+7">
+          <li>
+            <input class="radios__input" type="radio" id="advise-required" name="program-selection">
+            <label class="radios__label" for="advise-required">Не знаю (Нужен ваш совет)</label>
           </li>
         </ul>
-      </fieldset>
-      <fieldset class="comment">
-        <legend class="comment__description">Комментарий</legend>
-        <h3 class="visually-hidden">Комментарий</h3>
-        <textarea name="pet__description" cols="20" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
-      </fieldset>
-      <fieldset class="extra">
-        <legend class="extra__description">Дополнительно</legend>
-        <h3 class="visually-hidden">Дополнительно</h3>
-        <ul class="extra__list">
-          <li class="extra__item">
-            <input class="extra-checkbox" type="checkbox" id="sugar-free" name="sugar-free">
-            <label class="extra-checkbox-label" for="sugar-free">Сахарозаменитель</label>
+      </section>
+      <section class="form__field-group form__field-group--email-tel">
+        <h3 class="form__title">Контактные данные (владельца кота)</h3>
+        <ul class="form__list">
+          <li>
+            <label class="form__mail-label" for="mail">E-mail:*</label>
+            <input class="form__mail-input" type="email" id=mail" name="mail" placeholder="Введите e-mail">
           </li>
-          <li class="extra__item">
-            <input class="extra-checkbox" type="checkbox" id="water" name="water">
-            <label class="extra-checkbox-label" for="water">Питьевая вода</label>
-          </li>
-          <li class="extra__item">
-            <input class="extra-checkbox" type="checkbox" id="milk" name="milk">
-            <label class="extra-checkbox-label" for="milk">Молоко</label>
-          </li>
-          <li class="extra__item">
-            <input class="extra-checkbox" type="checkbox" id="vitamins" name="vitamins">
-            <label class="extra-checkbox-label" for="vitamins">Витамины</label>
+          <li>
+            <label class="form__tel-label" for="owner-tel">Телефон:*</label>
+            <input class="form__tel-input" type="tel" id="tel" name="tel" placeholder="+7">
           </li>
         </ul>
-      </fieldset>
-      <button class="program-request__submit-button" type="submit">Отправить заявку</button>
-      <p class="program-request__required-mark">* — Обязательные поля</p>
+      </section>
+      <section class="form__field-group form__field-group--comment">
+        <h3 class="form__title">Комментарий</h3>
+        <textarea class="form__textarea" name="pet__description" cols="20" rows="6"
+          placeholder="Расскажите обо всех повадках кота"></textarea>
+      </section>
+      <section class="form__field-group form__field-group--checkboxes checkboxes">
+        <h3 class="form__title">Дополнительно</h3>
+        <ul class="form__list">
+          <li>
+            <input class="checkboxes__input" type="checkbox" id="sugar-free" name="sugar-free">
+            <label class="checkboxes__label" for="sugar-free">Сахарозаменитель</label>
+          </li>
+          <li>
+            <input class="checkboxes__input" type="checkbox" id="water" name="water">
+            <label class="checkboxes__label" for="water">Питьевая вода</label>
+          </li>
+          <li>
+            <input class="checkboxes__input" type="checkbox" id="milk" name="milk">
+            <label class="checkboxes__label" for="milk">Молоко</label>
+          </li>
+          <li>
+            <input class="checkboxes__input" type="checkbox" id="vitamins" name="vitamins">
+            <label class="checkboxes__label" for="vitamins">Витамины</label>
+          </li>
+        </ul>
+      </section>
+      <button class="form__submit-button" type="submit">Отправить заявку</button>
+      <p class="form__required-mark">* — Обязательные поля</p>
     </form>
     <section class="partnership">
       <h2 class="partnership__title partnership__title--small">Приглашаем к сотрудничеству дилеров!</h2>
