@@ -14,10 +14,10 @@
         alt="Логотип компании Cat energy">
     </a>
     <img src="/source/img/logo-text.svg" alt="Текстовый логотип компании Cat energy">
-    <button class="main-header__nav-toogle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
     <nav class="main-nav">
+      <button class="main-nav__toogle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
@@ -33,74 +33,88 @@
       </div>
     </nav>
   </header>
-  <main class="main">
-    <section class="main__intro intro">
-      <h1 class="intro__title">Функциональное питание для котов</h1>
-      <p class="intro__description">Занялся собой? Займист котом!</p>
-      <img class="intro__img" src="/source/img/index-can-mobile.png" alt="Банка с едой для котов">
-      <a class="intro__button button" href="form.html">Подбор программы</a>
-    </section>
-    <section class="main__programs programs">
-      <h2 class="visually-hidden">Программы питания</h2>
-      <div class="programs__slim">
-        <h3 class="main__programs-title">Похудение</h3>
-        <p class="main__programs-description">Ваш кот весит больше собаки и почти утратил способность лазить по
-          деревьям?
-          Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-        <a class="main__catalog-link" href="catalog.html">Каталог slim</a>
-      </div>
-      <div class="programs__pro">
-        <h3 class="main__prgrams-title">Набор массы</h3>
-        <p class="main__programs-description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
-          Pro
-          поможет вашему коту нарастить необходимые мышцы!</p>
-        <a class="main__catalog-link" href="catalog.html">Каталог slim</a>
-      </div>
-    </section>
-    <section class="main__advantages">
-      <h2 class="main__title">Как это работает</h2>
-      <ul class="main__list">
-        <li class="main__item main__item--nutrients">
-          <p class="main__description">Функциональное питание
-            содержит только полезные
-            питательные вещества.</p>
-        </li>
-        <li class="main__item main__item--consistency">
-          <p class="main__description">Выпускается в виде порошка,
-            который нужно лишь залить
-            кипятком и готово.</p>
-        </li>
-        <li class="main__item main__item--meal">
-          <p class="main__description">Замените один-два приема
-            обычной еды на наше
-            функциональное питание.</p>
-        </li>
-        <li class="main__item main__item--duration">
-          <p class="main__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-        </li>
-      </ul>
-    </section>
-    <section class="main__example">
-      <h2 class="main__title">Живой пример</h2>
-      <p class="main__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-        Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
-        в день. </p>
-      <div class="main__stats-list main__stats-list--weight weight duration">
-        <div class="weight__wrapper">
-          <p class="weight__stat-number">5 кг</p>
-          <p class="weight__stat-text">снижение веса</p>
-        </div>
-        <div class="duration__wrapper">
-          <p class="duration__stat-number">60 дней</p>
-          <p class="duration__stat-text">затрачено времени</p>
-        </div>
-      </div>
-      <p class="main__spent-amount">Затраты на питание: 15 000 руб.</p>
-      <div class="main__compare-slider">
-        <img class="main__example-img" src="/source/img/viewport=mobile.png" alt="">
-      </div>
-    </section>
-    <section class="main__partnership partnership">
+  <main class="form">
+    <h1 class="form__title">Подбор программы</h1>
+    <h2 class="form__description">Заполните анкету, и мы подберем
+      программу питания для вашего кота</h2>
+    <form class="program-form form" action="https://echo.htmlacademy.ru/" method="post">
+      <section class="form__field-group form__field-group--pet">
+        <h3 class="visually-hidden">Данные кота</h3>
+        <ul class="form__list">
+          <li>
+            <label class="form__pet-label" for="pet-name">Имя:*</label>
+            <input class="form__pet-input" type="text" id="pet-name" placeholder="Введите имя кота" required>
+          </li>
+          <li>
+            <label class="form__label" for="pet-weight">Вес:*</label>
+            <input class="form__input" type="number" id="pet-weight" placeholder="Введите вес кота" required>
+          </li>
+          <li>
+            <label class="form__label" for="pet-age">Возраст:</label>
+            <input class="form__input" type="number" id="pet-age" placeholder="Введите возраст кота" required>
+          </li>
+        </ul>
+      </section>
+      <section class="form__field-group form__field-group--radios radios">
+        <h3 class="visually-hidden">Выбор программы</h3>
+        <ul class="form__list">
+          <li>
+            <input class="radios__input" type="radio" id="weight-loss" name="program-selection">
+            <label class="radios__label" for="weight-loss">Похудение</label>
+          </li>
+          <li>
+            <input class="radios__input" type="radio" id="weight-gain" name="program-selection">
+            <label class="radios__label" for="weight-gain">Набор массы</label>
+          </li>
+          <li>
+            <input class="radios__input" type="radio" id="advise-required" name="program-selection">
+            <label class="radios__label" for="advise-required">Не знаю (Нужен ваш совет)</label>
+          </li>
+        </ul>
+      </section>
+      <section class="form__field-group form__field-group--email-tel">
+        <h3 class="form__title">Контактные данные (владельца кота)</h3>
+        <ul class="form__list">
+          <li>
+            <label class="form__mail-label" for="email">E-mail:*</label>
+            <input class="form__mail-input" type="email" id="email" name="email" placeholder="Введите e-mail">
+          </li>
+          <li>
+            <label class="form__tel-label" for="tel">Телефон:*</label>
+            <input class="form__tel-input" type="tel" id="tel" name="tel" placeholder="+7">
+          </li>
+        </ul>
+      </section>
+      <section class="form__field-group form__field-group--comment">
+        <h3 class="form__title">Комментарий</h3>
+        <textarea class="form__textarea" name="pet__description" cols="20" rows="6"
+          placeholder="Расскажите обо всех повадках кота"></textarea>
+      </section>
+      <section class="form__field-group form__field-group--checkboxes checkboxes">
+        <h3 class="form__title">Дополнительно</h3>
+        <ul class="form__list">
+          <li>
+            <input class="checkboxes__input" type="checkbox" id="sugar-free" name="sugar-free">
+            <label class="checkboxes__label" for="sugar-free">Сахарозаменитель</label>
+          </li>
+          <li>
+            <input class="checkboxes__input" type="checkbox" id="water" name="water">
+            <label class="checkboxes__label" for="water">Питьевая вода</label>
+          </li>
+          <li>
+            <input class="checkboxes__input" type="checkbox" id="milk" name="milk">
+            <label class="checkboxes__label" for="milk">Молоко</label>
+          </li>
+          <li>
+            <input class="checkboxes__input" type="checkbox" id="vitamins" name="vitamins">
+            <label class="checkboxes__label" for="vitamins">Витамины</label>
+          </li>
+        </ul>
+      </section>
+      <button class="form__submit-button" type="submit">Отправить заявку</button>
+      <p class="form__required-mark">* — Обязательные поля</p>
+    </form>
+    <section class="partnership">
       <h2 class="partnership__title partnership__title--small">Приглашаем к сотрудничеству дилеров!</h2>
       <p class="partnership__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       <img class="partnership__adress-img" src="/source/img/partnership-map-img.png" width="320" height="362" alt="Мы на ходимся здесь: ул. Большая
