@@ -4,37 +4,42 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="/source/css/style.css">
+  <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
-  <header class="main-header">
-    <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-img" src="/source/img/logo-mobile-img.svg" width="33" height="37"
+  <header class="header">
+    <a class="header__logo" href="index.html">
+      <img class="header__logo-img" src="./img/logo-mobile-img.svg" width="33" height="37"
         alt="Логотип компании Cat energy">
     </a>
-    <img src="/source/img/logo-text.svg" alt="Текстовый логотип компании Cat energy">
+    <img src="./img/logo-text.svg" alt="Текстовый логотип компании Cat energy">
+    <button class="header__nav-toogle" type="button">
+      <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5" />
+        <line y1="9.25" x2="24" y2="9.25" stroke="black" stroke-width="1.5" />
+        <line y1="17.25" x2="24" y2="17.25" stroke="black" stroke-width="1.5" />
+      </svg>
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
     <nav class="main-nav">
-      <button class="main-nav__toogle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Каталог продукции</a>
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Подбор программы</a>
+            <a class="main-nav__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
-  <main class="form">
-    <h1 class="form__title">Подбор программы</h1>
+  <main class="form form-page">
+    <h1 class="form-page__title">Подбор программы</h1>
     <h2 class="form__description">Заполните анкету, и мы подберем
       программу питания для вашего кота</h2>
     <form class="program-form form" action="https://echo.htmlacademy.ru/" method="post">
@@ -46,12 +51,12 @@
             <input class="form__pet-input" type="text" id="pet-name" placeholder="Введите имя кота" required>
           </li>
           <li>
-            <label class="form__label" for="pet-weight">Вес:*</label>
-            <input class="form__input" type="number" id="pet-weight" placeholder="Введите вес кота" required>
+            <label class="form__pet-label" for="pet-weight">Вес:*</label>
+            <input class="form__pet-input" type="number" id="pet-weight" placeholder="Введите вес кота" required>
           </li>
           <li>
-            <label class="form__label" for="pet-age">Возраст:</label>
-            <input class="form__input" type="number" id="pet-age" placeholder="Введите возраст кота" required>
+            <label class="form__pet-label" for="pet-age">Возраст:</label>
+            <input class="form__pet-input" type="number" id="pet-age" placeholder="Введите возраст кота" required>
           </li>
         </ul>
       </section>
@@ -59,7 +64,7 @@
         <h3 class="visually-hidden">Выбор программы</h3>
         <ul class="form__list">
           <li>
-            <input class="radios__input" type="radio" id="weight-loss" name="program-selection">
+            <input class="radios__input" type="radio" id="weight-loss" name="program-selection" checked>
             <label class="radios__label" for="weight-loss">Похудение</label>
           </li>
           <li>
@@ -88,7 +93,7 @@
       <section class="form__field-group form__field-group--comment">
         <h3 class="form__title">Комментарий</h3>
         <textarea class="form__textarea" name="pet__description" cols="20" rows="6"
-          placeholder="Расскажите обо всех повадках кота"></textarea>
+          placeholder="Расскажите обо всех повaдках кота"></textarea>
       </section>
       <section class="form__field-group form__field-group--checkboxes checkboxes">
         <h3 class="form__title">Дополнительно</h3>
@@ -111,13 +116,15 @@
           </li>
         </ul>
       </section>
-      <button class="form__submit-button" type="submit">Отправить заявку</button>
+      <button class="form__submit-button button" type="submit">Отправить заявку</button>
       <p class="form__required-mark">* — Обязательные поля</p>
     </form>
     <section class="partnership">
-      <h2 class="partnership__title partnership__title--small">Приглашаем к сотрудничеству дилеров!</h2>
-      <p class="partnership__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-      <img class="partnership__adress-img" src="/source/img/partnership-map-img.png" width="320" height="362" alt="Мы на ходимся здесь: ул. Большая
+      <div class="partnership__wrapper">
+        <h2 class="partnership__title partnership__title--small">Приглашаем к сотрудничеству дилеров!</h2>
+        <p class="partnership__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </div>
+      <img class="partnership__adress-img" src="./img/partnership-map-img.png" width="320" height="362" alt="Мы на ходимся здесь: ул. Большая
       Конюшенная, д. 19/8
       Санкт-Петербург">
     </section>
@@ -125,7 +132,7 @@
   <footer class="page-footer">
     <ul class="page-footer__list">
       <li class="page-footer__item">
-        <img src="/source/img/logo-text.svg" alt="Текстовый логотип компании Cat energy">
+        <img src="./img/logo-text.svg" alt="Текстовый логотип компании Cat energy">
       </li>
       <li class="page-footer__item">
         <a class="page-footer__link" href="https://vk.com/htmlacademy">
@@ -154,7 +161,7 @@
         </a>
       </li>
       <li class="page-footer__item">
-        <a href="https://htmlacademy.ru/">HTML Academy</a>
+        <a class="page-footer__link" href="https://htmlacademy.ru/">HTML Academy</a>
         <a href="https://htmlacademy.ru/">
           <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
