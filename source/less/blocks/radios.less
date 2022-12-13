@@ -1,0 +1,43 @@
+.radios .form__list li:not(:last-child) {
+  padding-bottom: 25px;
+}
+
+.radios__input {
+  display: none;
+}
+
+.radios__label {
+  padding-left: 45px;
+}
+
+.radios__input + .radios__label {
+  position: relative;
+}
+
+.radios__input + .radios__label::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  outline: 1px solid rgba(205, 205, 205, 1);
+  border-radius: 50%;
+  position: absolute;
+  background: @white;
+  bottom: -5px;
+  left: 1px;
+}
+
+.radios__input + .radios__label::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #68b738;
+  left: 9px;
+  bottom: 3px;
+  opacity: 0;
+}
+
+.radios__input:checked + .radios__label::after {
+  opacity: 1;
+}
