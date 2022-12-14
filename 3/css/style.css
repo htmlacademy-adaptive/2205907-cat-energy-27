@@ -23,7 +23,7 @@
   font-display: swap;
 }
 .page__body {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin: 0;
   width: 320px;
 }
@@ -49,7 +49,7 @@
   width: 320px;
   background-color: #ffffff;
   top: 65px;
-  border-top: 1px solid #E6E6E6;
+  border-top: 1px solid #e6e6e6;
 }
 .main-nav__list {
   list-style-type: none;
@@ -81,7 +81,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 26px 20px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 .partnership__title {
   margin: 0;
@@ -152,6 +152,67 @@
   font-family: "Oswald Regular", sans-serif;
   font-weight: 400;
   border: none;
+}
+.radios .form__list li:not(:last-child) {
+  padding-bottom: 25px;
+}
+.radios__input {
+  display: none;
+}
+.radios__label {
+  padding-left: 45px;
+}
+.radios__input + .radios__label {
+  position: relative;
+}
+.radios__input + .radios__label::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  outline: 1px solid #cdcdcd;
+  border-radius: 50%;
+  position: absolute;
+  background: #ffffff;
+  bottom: -5px;
+  left: 1px;
+}
+.radios__input + .radios__label::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #68b738;
+  left: 9px;
+  bottom: 3px;
+  opacity: 0;
+}
+.radios__input:checked + .radios__label::after {
+  opacity: 1;
+}
+.checkboxes__input {
+  display: none;
+}
+.checkboxes__label {
+  padding-left: 46px;
+}
+.checkboxes__input + .checkboxes__label {
+  position: relative;
+}
+.checkboxes__input + .checkboxes__label::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  outline: 1px solid #cdcdcd;
+  position: absolute;
+  background-color: #ffffff;
+  top: -6px;
+  left: 1px;
+}
+.checkboxes__input:checked + .checkboxes__label::before {
+  background-image: url("../img/checkox-checked.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .intro {
   background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/intro-bg-img.jpg");
@@ -264,6 +325,16 @@
   margin: 0;
   padding-bottom: 20px;
 }
+.examples__spent-amount {
+  margin: 0;
+  font-family: "Oswald Regular", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 20px;
+}
 .stats {
   display: flex;
   flex-direction: row;
@@ -298,25 +369,8 @@
   bottom: -14px;
   left: 35px;
 }
-.examples__spent-amount {
-  margin: 0;
-  font-family: "Oswald Regular", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  padding-bottom: 20px;
-}
 .form {
   font-family: "Oswald Regular", sans-serif;
-  font-weight: 400;
-}
-.form-page__title {
-  margin: 0;
-  padding: 27px 20px 37px;
-  font-size: 36px;
-  line-height: 36px;
   font-weight: 400;
 }
 .form__title {
@@ -332,9 +386,6 @@
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
-}
-.program-form {
-  padding: 0 20px;
 }
 .form__list {
   list-style-type: none;
@@ -372,49 +423,8 @@
   border: 1px solid #e7e7e7;
   width: 100%;
 }
-.form__pet-input::-webkit-outer-spin-button,
-.form__pet-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
 .form__field-group--radios {
   padding: 28px 0 25px;
-}
-.radios .form__list li:not(:last-child) {
-  padding-bottom: 25px;
-}
-.radios__input {
-  display: none;
-}
-.radios__label {
-  padding-left: 45px;
-}
-.radios__input + .radios__label {
-  position: relative;
-}
-.radios__input + .radios__label::before {
-  content: "";
-  width: 30px;
-  height: 30px;
-  outline: 1px solid #cdcdcd;
-  border-radius: 50%;
-  position: absolute;
-  background: #ffffff;
-  bottom: -5px;
-  left: 1px;
-}
-.radios__input + .radios__label::after {
-  content: "";
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  position: absolute;
-  background-color: #68B738;
-  left: 9px;
-  bottom: 3px;
-  opacity: 0;
-}
-.radios__input:checked + .radios__label::after {
-  opacity: 1;
 }
 .form__field-group--email-tel {
   padding-bottom: 23px;
@@ -454,7 +464,6 @@
 }
 .form__textarea {
   box-sizing: border-box;
-  height: 45px;
   padding: 9px 15px;
   font-family: "Oswald Regular", sans-serif;
   font-weight: 400;
@@ -476,33 +485,11 @@
 .form__field-group--checkboxes li:not(:last-child) {
   padding-bottom: 25px;
 }
-.checkboxes__input {
-  display: none;
-}
-.checkboxes__label {
-  padding-left: 46px;
-}
-.checkboxes__input + .checkboxes__label {
-  position: relative;
-}
-.checkboxes__input + .checkboxes__label:before {
-  content: "";
-  width: 30px;
-  height: 30px;
-  outline: 1px solid #cdcdcd;
-  position: absolute;
-  background-color: #ffffff;
-  top: -6px;
-  left: 1px;
-}
-.checkboxes__input:checked + .checkboxes__label::before {
-  background-image: url("../img/checkox-checked.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
 .form__submit-button {
   width: 280px;
   padding: 7px 44px;
+  font-size: 16px;
+  line-height: 20px;
 }
 .form__required-mark {
   font-family: "Lato Regular", sans-serif;
@@ -513,6 +500,16 @@
   padding: 21px 0 32px;
   text-align: center;
 }
+.form-page__title {
+  margin: 0;
+  padding: 27px 20px 37px;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+.program-form {
+  padding: 0 20px;
+}
 .catalog__title {
   font-family: "Oswald Regular", sans-serif;
   font-weight: 400;
@@ -521,8 +518,7 @@
   margin: 0;
   padding: 27px 20px 41px 20px;
 }
-.products__list,
-.products-extra__list {
+.products__list {
   margin: 0;
   padding: 0 20px;
   list-style-type: none;
@@ -568,8 +564,7 @@
   line-height: 16px;
   margin: 0;
 }
-.products__order-button,
-.products-extra__order-button {
+.products__order-button {
   font-size: 16px;
   line-height: 20px;
   padding: 10px 109px;
@@ -609,6 +604,11 @@
 .products-extra__card {
   padding: 13px 0 19px 0;
 }
+.products-extra__list {
+  margin: 0;
+  padding: 0 20px;
+  list-style-type: none;
+}
 .products-extra__title {
   font-family: "Oswald Regular", sans-serif;
   font-weight: 400;
@@ -628,6 +628,11 @@
   font-size: 14px;
   line-height: 14px;
   margin: 0;
+}
+.products-extra__order-button {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 109px;
 }
 .promotion {
   padding: 35px 20px;
