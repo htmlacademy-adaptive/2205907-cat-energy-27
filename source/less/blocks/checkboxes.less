@@ -1,0 +1,29 @@
+.checkboxes__input {
+  display: none;
+}
+
+.checkboxes__label {
+  padding-left: 46px;
+}
+
+.checkboxes__input + .checkboxes__label {
+  position: relative;
+}
+
+.checkboxes__input + .checkboxes__label::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  outline: 1px solid rgba(205, 205, 205, 1);
+  position: absolute;
+  background-color: @white;
+  top: -6px;
+  left: 1px;
+}
+
+.checkboxes__input:checked + .checkboxes__label::before {
+  // content: "😁";
+  background-image: url("../img/checkox-checked.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
