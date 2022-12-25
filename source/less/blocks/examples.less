@@ -28,6 +28,60 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
-  text-align: center;
   padding-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .examples {
+    background-color: #eaeaea;
+    padding: 43px 30px 101px;
+  }
+
+  .examples__stats-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .examples__spent-amount {
+    width: 174px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: end;
+  }
+
+  .examples__title {
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 63px;
+  }
+
+  .examples__description {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 54px;
+  }
+
+  .examples__img {
+    width: 560px;
+    height: 512px;
+    padding: 99px auto 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .examples {
+    padding: 25px 110px 40px;
+    display: flex;
+  }
+
+  .examples__stats-wrapper {
+    display: block;
+    align-items: center;
+  }
+
+  .examples__spent-amount {
+    width: auto;
+    text-align: start;
+  }
 }

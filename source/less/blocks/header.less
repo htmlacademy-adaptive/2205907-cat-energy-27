@@ -13,3 +13,49 @@
   padding: 0;
   padding-top: 3px;
 }
+
+@media (min-width: @tablet-width) {
+  .header {
+    padding: 24px 30px 45px 30px;
+    justify-content: unset;
+    border: none;
+  }
+
+  .header__nav-toogle {
+    display: none;
+  }
+
+  .header__logo-text {
+    padding-left: 12px;
+  }
+
+  .main-nav__link--current {
+    position: relative;
+  }
+
+  .main-nav__link--current::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #68b738;
+    position: absolute;
+    bottom: -10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    padding:53px 110px 73px;
+  }
+
+  .header__logo-img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .header__logo-text {
+    height: 60px;
+    width: 125px;
+    padding-left: 14px;
+  }
+}

@@ -3,7 +3,7 @@
   position: fixed;
   left: 0;
   justify-content: center;
-  width: 320px;
+  width: 100%;
   background-color: @white;
   top: 65px;
   border-top: 1px solid #e6e6e6;
@@ -28,4 +28,40 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    position: relative;
+    display: unset;
+    border: none;
+    top: 0;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 94px;
+  }
+
+  .main-nav__item {
+    padding: 0;
+    padding-right: 35px;
+  }
+
+  .main-nav__item:last-child {
+    padding: 0;
+  }
+
+  .main-nav__link {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

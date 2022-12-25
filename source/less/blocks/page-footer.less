@@ -47,3 +47,44 @@
   color: #000000;
   padding-right: 141px;
 }
+
+@media (min-width: @tablet-width) {
+  .page-footer__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 58px 30px 55px;
+    margin: 0;
+  }
+
+  .page-footer__item:first-child {
+    padding: 0 155px 0 0;
+  }
+
+  .page-footer__item:not(:first-child):not(:last-child) {
+    padding: 0 133px 0 0;
+  }
+
+  .page-footer__item:last-child {
+    display: flex;
+    justify-content: unset;
+    padding: 0;
+  }
+
+  .page-footer__item:last-child .page-footer__link {
+    padding-right: 23px;
+  }
+
+  .page-footer__logo-text {
+    width: 128px;
+    height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__list {
+    padding: 57px 110px 58px;
+  }
+}
