@@ -7,7 +7,7 @@
   padding: 30px 19px 22px 19px;
 }
 
-.programs__wrapper:first-child {
+.programs__wrapper:not(:last-child) {
   margin-bottom: 20px;
 }
 
@@ -51,6 +51,10 @@
     padding: 77px 316px 57px 52px;
   }
 
+  .programs__wrapper:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
   .programs__title {
     font-size: 36px;
     line-height: 36px;
@@ -83,7 +87,7 @@
     padding: 77px 61px 59px 52px;
   }
 
-  .programs__wrapper:first-child {
+  .programs__wrapper:not(:last-child) {
     margin-bottom: 0;
   }
 
