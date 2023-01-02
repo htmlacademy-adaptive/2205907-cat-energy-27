@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="./css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page__body">
@@ -13,7 +14,7 @@
       <img class="header__logo-img" src="./img/logo-mobile-img.svg" width="33" height="37"
         alt="Логотип компании Cat energy">
     </a>
-    <img src="./img/logo-text.svg" alt="Текстовый логотип компании Cat energy">
+    <img class="header__logo-text" src="./img/logo-text.svg" alt="Текстовый логотип компании Cat energy">
     <button class="header__nav-toogle" type="button">
       <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5" />
@@ -25,11 +26,11 @@
     <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--current">
+          <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link main-nav__link--current" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Подбор программы</a>
@@ -156,7 +157,7 @@
           <button class="button products__order-button" type="button">Заказать</button>
         </li>
         <li class="products__card products__card--extra">
-          <h3 class="products__title--extra">Показать еще 100500 товаров</h3>
+          <h3 class="products__title-extra">Показать еще 100500 товаров</h3>
           <p>На самом деле вкусов гораздо больше!</p>
           <button class="products__more-button button" type="button">Показать все</button>
         </li>
@@ -164,45 +165,51 @@
     </section>
     <section class="products-extra">
       <h1 class="products-extra__main-title">Дополнительные товары</h1>
-      <ul class="products-extra__list">
-        <li class="products-extra__card">
-          <h3 class="products-extra__title">Сахарозаменитель</h3>
-          <div class="products-extra__description">
-            <p class="products-extra__weight">1 упаковка (100 г)</p>
-            <p class="products-extra__price">200 ₽</p>
+      <div class="products-extra__wrapper-desktop">
+        <ul class="products-extra__list">
+          <li class="products-extra__card">
+            <h3 class="products-extra__title">Сахарозаменитель</h3>
+            <div class="products-extra__description">
+              <p class="products-extra__weight">1 упаковка (100 г)</p>
+              <p class="products-extra__price">200 ₽</p>
+            </div>
+            <button class="button products-extra__order-button" type="button">Заказать</button>
+          </li>
+          <li class="products-extra__card">
+            <h3 class="products-extra__title">Питьевая вода</h3>
+            <div class="products-extra__description">
+              <p class="products-extra__weight">5 литров</p>
+              <p class="products-extra__price">50 ₽</p>
+            </div>
+            <button class="button products-extra__order-button" type="button">Заказать</button>
+          </li>
+          <li class="products-extra__card">
+            <h3 class="products-extra__title">Молоко</h3>
+            <div class="products-extra__description">
+              <p class="products-extra__weight">1 литр</p>
+              <p class="products-extra__price">100 ₽</p>
+            </div>
+            <button class="button products-extra__order-button" type="button">Заказать</button>
+          </li>
+          <li class="products-extra__card">
+            <h3 class="products-extra__title">Витамины</h3>
+            <div class="products-extra__description">
+              <p class="products-extra__weight">1 упаковка (30 г)</p>
+              <p class="products-extra__price">300 ₽</p>
+            </div>
+            <button class="button products-extra__order-button" type="button">Заказать</button>
+          </li>
+        </ul>
+        <div class="products-extra__promotion promotion">
+          <div class="promotion__block">
+            <p class="promotion__description">Закажите все и получите чехол для кота в подарок!</p>
           </div>
-          <button class="button products-extra__order-button" type="button">Заказать</button>
-        </li>
-        <li class="products-extra__card">
-          <h3 class="products-extra__title">Питьевая вода</h3>
-          <div class="products-extra__description">
-            <p class="products-extra__weight">5 литров</p>
-            <p class="products-extra__price">50 ₽</p>
-          </div>
-          <button class="button products-extra__order-button" type="button">Заказать</button>
-        </li>
-        <li class="products-extra__card">
-          <h3 class="products-extra__title">Молоко</h3>
-          <div class="products-extra__description">
-            <p class="products-extra__weight">1 литр</p>
-            <p class="products-extra__price">100 ₽</p>
-          </div>
-          <button class="button products-extra__order-button" type="button">Заказать</button>
-        </li>
-        <li class="products-extra__card">
-          <h3 class="products-extra__title">Витамины</h3>
-          <div class="products-extra__description">
-            <p class="products-extra__weight">1 упаковка (30 г)</p>
-            <p class="products-extra__price">300 ₽</p>
-          </div>
-          <button class="button products-extra__order-button" type="button">Заказать</button>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
-    <div class="catalog__promotion promotion">
-      <p class="promotion__description">Закажите все и получите чехол для кота в подарок!</p>
-    </div>
-    <section class="main__partnership partnership">
+  </main>
+  <footer class="page-footer">
+    <section class="page-footer__partnership partnership">
       <div class="partnership__wrapper">
         <h2 class="partnership__title partnership__title--small">Приглашаем к сотрудничеству дилеров!</h2>
         <p class="partnership__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -211,8 +218,6 @@
       Конюшенная, д. 19/8
       Санкт-Петербург">
     </section>
-  </main>
-  <footer class="page-footer">
     <ul class="page-footer__list">
       <li class="page-footer__item">
         <img src="./img/logo-text.svg" alt="Текстовый логотип компании Cat energy">

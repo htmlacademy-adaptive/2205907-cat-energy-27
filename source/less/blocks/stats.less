@@ -35,3 +35,32 @@
   bottom: -14px;
   left: 35px;
 }
+
+@media (min-width: @tablet-width) {
+  .stats__wrapper:first-child {
+    margin-right: 42px;
+  }
+
+  .stats__number {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .stats__text {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stats {
+    padding-bottom: 60px;
+    justify-content: flex-start;
+  }
+
+  .stats__number {
+    box-sizing: border-box;
+    width: 162px;
+    margin: 0;
+  }
+}

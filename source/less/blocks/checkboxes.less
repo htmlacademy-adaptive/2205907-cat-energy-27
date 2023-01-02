@@ -27,3 +27,26 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@media (min-width: @tablet-width) {
+  .checkboxes__label {
+    padding: 0 0 0 60px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .checkboxes__input + .checkboxes__label::before {
+    width: 40px;
+    height: 40px;
+    outline: 1px solid #cdcdcd;
+    top: -4px;
+  }
+
+  .checkboxes__input:checked + .checkboxes__label::before {
+    // content: "😁";
+    background-image: url("../img/checkox-checked.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 18px;
+  }
+}
