@@ -27,6 +27,47 @@
   line-height: 18px;
   margin: 0;
   padding-left: 80px;
+  position: relative;
+}
+
+.advantages__description--nutrients::before {
+  content: "";
+  background-image: url(../img/advantages__nutrients.png);
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+
+.advantages__description--consistency::before {
+  content: "";
+  background-image: url(../img/advantages__consistency.png);
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+
+.advantages__description--meal::before {
+  content: "";
+  background-image: url(../img/advantages__meal.png);
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+
+.advantages__description--duration::before {
+  content: "";
+  background-image: url(../img/advantages__duration.png);
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: -3px;
 }
 
 @media (min-width: @tablet-width) {
@@ -43,12 +84,88 @@
   .advantages__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 280px 280px;
+    row-gap: 37px;
+  }
+
+  .advantages__item:first-child {
+    background-image: url(../img/advantages__number-1.png);
+    background-repeat: no-repeat;
+    background-position: bottom 10% right 23%;
+    width: 230px;
+    padding: 157px 0 57px;
+    margin-right: 153px;
+  }
+
+  .advantages__item:nth-child(2) {
+    background-image: url(../img/advantages__number-2.png);
+    background-repeat: no-repeat;
+    background-position: bottom 10% right 0%;
+    width: 230px;
+    padding: 157px 0 57px;
+  }
+
+  .advantages__item:nth-child(3) {
+    background-image: url(../img/advantages__number-3.png);
+    background-repeat: no-repeat;
+    background-position: bottom 10% right 0%;
+    width: 230px;
+    padding: 157px 0 57px;
+  }
+
+  .advantages__item:last-child {
+    background-image: url(../img/advantages__number-4.png);
+    background-repeat: no-repeat;
+    background-position: bottom 10% right 0%;
+    width: 230px;
+    padding: 157px 0 57px;
   }
 
   .advantages__description {
     font-size: 16px;
     line-height: 24px;
     padding-left: 0;
+    width: 204px;
+  }
+
+  .advantages__description--nutrients::before {
+    background-image: url(../img/advantages__nutrients--desk.png);
+    width: 80px;
+    height: 80px;
+    left: 0;
+    top: -110px;
+  }
+
+  .advantages__description--consistency {
+    width: 224px;
+  }
+
+  .advantages__description--consistency::before {
+    background-image: url(../img/advantages__consistency--desk.png);
+    width: 80px;
+    height: 80px;
+    left: 0;
+    top: -110px;
+  }
+
+  .advantages__description--meal::before {
+    background-image: url(../img/advantages__meal--desk.png);
+    width: 80px;
+    height: 80px;
+    left: 0;
+    top: -110px;
+  }
+
+  .advantages__description--duration {
+    width: 245px;
+  }
+
+  .advantages__description--duration::before {
+    background-image: url(../img/advantages__duration--desk.png);
+    width: 80px;
+    height: 80px;
+    left: 0;
+    top: -110px;
   }
 }
 
@@ -65,5 +182,38 @@
 
   .advantages__item {
     padding: 151px 0 57px 0;
+  }
+
+  .advantages__item:first-child {
+    background-image: url(../img/advantages__number-1.png);
+    background-repeat: no-repeat;
+    background-position: bottom 10% right 23%;
+    width: 230px;
+    padding: 157px 0 57px;
+    margin-right: 0;
+  }
+
+  .advantages__item:nth-child(2) {
+    background-image: url(../img/advantages__number-2.png);
+    background-repeat: no-repeat;
+    background-position: bottom 10% right 0%;
+    width: 230px;
+    padding: 157px 0 57px;
+  }
+
+  .advantages__item:nth-child(3) {
+    background-image: url(../img/advantages__number-3.png);
+    background-repeat: no-repeat;
+    background-position: bottom 10% right 0%;
+    width: 230px;
+    padding: 157px 0 57px;
+  }
+
+  .advantages__item:last-child {
+    background-image: url(../img/advantages__number-4.png);
+    background-repeat: no-repeat;
+    background-position: bottom 10% right 0%;
+    width: 230px;
+    padding: 157px 0 57px;
   }
 }

@@ -71,6 +71,21 @@
   padding: 28px 0 25px;
 }
 
+.form__title--email-tel {
+  max-width: 190px;
+  position: relative;
+}
+
+.form__title--email-tel::before {
+  content: "";
+  background-image: url(../img/title_line.png);
+  height: 2px;
+  width: 300px;
+  position: absolute;
+  top: 40px;
+  left: 205px;
+}
+
 .form__field-group--email-tel {
   padding-bottom: 23px;
 }
@@ -107,6 +122,20 @@
   width: 100%;
 }
 
+.form__title--comment {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url(../img/title_line.png);
+    height: 2px;
+    width: 300px;
+    position: absolute;
+    top: 15px;
+    left: 140px;
+  }
+}
+
 .form__field-group--comment {
   padding-bottom: 22px;
 }
@@ -128,6 +157,20 @@
   width: 100%;
   height: 150px;
   resize: none;
+}
+
+.form__title--checkboxes {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url(../img/title_line.png);
+    height: 2px;
+    width: 300px;
+    position: absolute;
+    top: 15px;
+    left: 160px;
+  }
 }
 
 .form__field-group--checkboxes {
@@ -256,7 +299,11 @@
     display: grid;
     grid-template-columns: 221px 221px;
     column-gap: 123px;
-    row-gap: 32px;
+    row-gap: 42px;
+  }
+
+  .form__field-group--checkboxes li:not(:last-child) {
+    padding-bottom: 0;
   }
 
   .form__submit-button {
