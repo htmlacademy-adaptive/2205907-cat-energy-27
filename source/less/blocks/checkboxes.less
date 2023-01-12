@@ -4,6 +4,12 @@
 
 .checkboxes__label {
   padding-left: 46px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 0 60px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .checkboxes__input + .checkboxes__label {
@@ -19,31 +25,21 @@
   background-color: @white;
   top: -6px;
   left: 1px;
-}
 
-.checkboxes__input:checked + .checkboxes__label::before {
-  // content: "😁";
-  background-image: url("../img/checkox-checked.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-@media (min-width: @tablet-width) {
-  .checkboxes__label {
-    padding: 0 0 0 60px;
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .checkboxes__input + .checkboxes__label::before {
+  @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
     outline: 1px solid #cdcdcd;
     top: -4px;
   }
+}
 
-  .checkboxes__input:checked + .checkboxes__label::before {
-    // content: "😁";
+.checkboxes__input:checked + .checkboxes__label::before {
+  background-image: url("../img/checkox-checked.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
     background-image: url("../img/checkox-checked.svg");
     background-position: center;
     background-repeat: no-repeat;
