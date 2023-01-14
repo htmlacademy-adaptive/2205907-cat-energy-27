@@ -27,6 +27,7 @@
   margin: 0 auto;
   padding: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 @media (min-width: 768px) {
   .page__body {
@@ -205,6 +206,7 @@
   line-height: 20px;
   padding-right: 2px;
   width: 100%;
+  max-width: 260px;
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
@@ -226,6 +228,7 @@
   font-size: 14px;
   line-height: 20px;
   width: 100%;
+  max-width: 260px;
 }
 @media (min-width: 768px) {
   .partnership__adress {
@@ -275,7 +278,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 0 20px 0;
   margin: 0;
 }
 @media (min-width: 768px) {
@@ -295,6 +298,19 @@
     padding: 57px 110px 58px;
   }
 }
+.page-footer__item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.page-footer__item:not(:last-child) {
+  border-bottom: 1px solid #d9d9d9;
+}
+@media (min-width: 768px) {
+  .page-footer__item:not(:last-child) {
+    border-bottom: none;
+  }
+}
 .page-footer__item:first-child {
   padding: 39px 76px 32px;
 }
@@ -308,18 +324,20 @@
 }
 @media (min-width: 768px) {
   .page-footer__item:not(:first-child):not(:last-child) {
+    display: flex;
     padding: 0 133px 0 0;
   }
 }
 .page-footer__item:last-child {
+  width: 280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 0;
+  padding: 20px 0 40px 0;
 }
 @media (min-width: 768px) {
   .page-footer__item:last-child {
-    display: flex;
+    width: unset;
     justify-content: unset;
     padding: 0;
   }
@@ -338,7 +356,13 @@
 .page-footer__item:last-child .page-footer__link {
   text-decoration: none;
   color: #000000;
-  padding-right: 141px;
+  padding-right: auto;
+}
+@media (min-width: 768px) {
+  .page-footer__item:last-child .page-footer__link {
+    width: 113px;
+    padding-right: 27px;
+  }
 }
 @media (min-width: 768px) {
   .page-footer__logo-text {
@@ -586,9 +610,9 @@
 }
 .programs__button {
   margin: 0 auto 20px auto;
-  padding: 7px 44px 7px 70px;
-  max-width: 280px;
-  box-sizing: border-box;
+  padding: 7px 70px 7px 70px;
+  max-width: 100%;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .programs__button {
@@ -1309,6 +1333,15 @@
   .form__field-group--email-tel .form__title {
     padding: 26px 0 76px;
   }
+  .form__field-group--email-tel .form__list {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    column-gap: 78px;
+    align-items: center;
+  }
+  .form__field-group--email-tel li:first-child {
+    padding: 0;
+  }
   .form__field-group--email-tel li:not(:last-child) {
     padding-bottom: 20px;
   }
@@ -1446,8 +1479,19 @@
   }
 }
 @media (min-width: 1440px) {
+  .form__field-group--checkboxes {
+    padding-bottom: 61px;
+  }
   .form__field-group--checkboxes .form__title {
     padding-bottom: 62px;
+  }
+  .form__field-group--checkboxes .form__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .form__field-group--checkboxes li:not(:last-child) {
+    padding: 0;
   }
 }
 .form__submit-button {
@@ -1515,28 +1559,6 @@
   .form__reqired-wrapper p {
     font-size: 16px;
     line-height: 16px;
-  }
-}
-@media (min-width: 1440px) {
-  .form__field-group--email-tel .form__list {
-    display: grid;
-    grid-template-columns: 570px 570px;
-    column-gap: 78px;
-    align-items: center;
-  }
-  .form__field-group--email-tel li:first-child {
-    padding: 0;
-  }
-  .form__field-group--checkboxes .form__list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .form__field-group--checkboxes li:not(:last-child) {
-    padding: 0;
-  }
-  .form__field-group--checkboxes {
-    padding-bottom: 61px;
   }
 }
 .form-page__title {
@@ -1623,6 +1645,8 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  align-items: center;
 }
 @media (min-width: 320px) {
   .products__list {
@@ -1655,6 +1679,7 @@
   }
 }
 .products__card {
+  box-sizing: border-box;
   width: 280px;
   display: flex;
   flex-wrap: wrap;
@@ -2112,7 +2137,6 @@
 @media (min-width: 768px) {
   .promotion__description::before {
     background-image: url("../img/promotion__gift-icon.svg");
-    position: absolute;
     width: 80px;
     height: 82px;
     top: -10px;
