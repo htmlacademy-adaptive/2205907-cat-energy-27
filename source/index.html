@@ -16,14 +16,9 @@
     </a>
     <img class="header__logo-text" src="./img/logo-text.svg" alt="Текстовый логотип компании Cat energy">
     <button class="header__nav-toogle" type="button">
-      <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5" />
-        <line y1="9.25" x2="24" y2="9.25" stroke="black" stroke-width="1.5" />
-        <line y1="17.25" x2="24" y2="17.25" stroke="black" stroke-width="1.5" />
-      </svg>
       <span class="visually-hidden">Открыть меню</span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -46,19 +41,19 @@
         <p class="intro__description">Занялся собой? Займись котом!</p>
       </div>
       <img class="intro__img" src="./img/index-can-mobile.png" alt="Cat energy PRO 1000г">
-      <a class="intro__button button" href="form.html">Подбор программы</a>
     </section>
     <section class="programs">
       <h2 class="visually-hidden">Программы питания</h2>
+      <a class="programs__button button" href="form.html">Подбор программы</a>
       <div class="programs__wrapper">
-        <h3 class="programs__title">Похудение</h3>
+        <h3 class="programs__title programs__loss">Похудение</h3>
         <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по
           деревьям?
           Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
         <a class="programs__catalog-link" href="catalog.html">Каталог slim</a>
       </div>
       <div class="programs__wrapper">
-        <h3 class="programs__title">Набор массы</h3>
+        <h3 class="programs__title programs__gain">Набор массы</h3>
         <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
           Pro
           поможет вашему коту нарастить необходимые мышцы!</p>
@@ -68,23 +63,24 @@
     <section class="advantages">
       <h2 class="advantages__title">Как это работает</h2>
       <ul class="advantages__list">
-        <li class="advantages__item advantages__item--nutrients">
-          <p class="advantages__description">Функциональное питание
+        <li class="advantages__item">
+          <p class="advantages__description advantages__nutrients">Функциональное питание
             содержит только полезные
             питательные вещества.</p>
         </li>
-        <li class="advantages__item advantages__item--consistency">
-          <p class="advantages__description">Выпускается в виде порошка,
+        <li class="advantages__item">
+          <p class="advantages__description advantages__consistency">Выпускается в виде порошка,
             который нужно лишь залить
             кипятком и готово.</p>
         </li>
-        <li class="advantages__item advantages__item--meal">
-          <p class="advantages__description">Замените один-два приема
+        <li class="advantages__item">
+          <p class="advantages__description advantages__meal">Замените один-два приема
             обычной еды на наше
             функциональное питание.</p>
         </li>
-        <li class="advantages__item advantages__item--duration">
-          <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+        <li class="advantages__item">
+          <p class="advantages__description  advantages__duration">Уже через месяц наслаждайтесь
+            изменениями к лучшему вашего питомца!</p>
         </li>
       </ul>
     </section>
@@ -121,9 +117,11 @@
         <h2 class="partnership__title partnership__title--small">Приглашаем к сотрудничеству дилеров!</h2>
         <p class="partnership__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
-      <img class="partnership__adress-img" src="./img/partnership-map-img.png" width="320" height="362" alt="Мы на ходимся здесь: ул. Большая
-      Конюшенная, д. 19/8
-      Санкт-Петербург">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+        width="320" height="362" allowfullscreen title="Мы на ходимся здесь: ул. Большая
+        Конюшенная, д. 19/8
+        Санкт-Петербург"></iframe>
     </section>
     <ul class="page-footer__list">
       <li class="page-footer__item">
@@ -168,5 +166,7 @@
     </ul>
   </footer>
 </body>
+
+<script src="./js/script.js"></script>
 
 </html>

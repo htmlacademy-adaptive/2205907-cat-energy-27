@@ -1,5 +1,15 @@
 .promotion {
   padding: 35px 0;
+  min-width: 280px;
+
+  @media (min-width: @tablet-width) {
+    padding: 69px 0 76px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    min-width: 245px;
+  }
 }
 
 .promotion__block {
@@ -9,6 +19,22 @@
   background-repeat: no-repeat;
   background-color: #5f5f5f;
   padding: 186px 61px 43px 58px;
+
+  @media (min-width: @tablet-width) {
+    background-size: 100%;
+    background-position: center 60%;
+    height: 200px;
+    position: relative;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-color: #5f5f5f;
+    padding: 0;
+    height: auto;
+  }
 }
 
 .promotion__description {
@@ -19,49 +45,46 @@
   text-align: center;
   margin: 0;
   color: @white;
-}
+  position: relative;
 
-@media (min-width: @tablet-width) {
-  .promotion {
-    padding: 69px 0 76px 0;
-  }
-
-  .promotion__block {
-    background-size: 100%;
-    background-position: center 60%;
-    height: 200px;
-    position: relative;
-    padding: 0;
-  }
-
-  .promotion__description {
+  @media (min-width: @tablet-width) {
     width: 161px;
     position: absolute;
     top: 71px;
     right: 124px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .promotion {
-    padding: 0;
-  }
-
-  .promotion__block {
-    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.9), rgba(104, 183, 56, 0.9)), url("../img/promotion_bg_img.jpg");
-    background-position: center;
-    background-size: 130%;
-    background-repeat: no-repeat;
-    background-color: #5f5f5f;
-    padding: 0;
-    height: auto;
-  }
-
-  .promotion__description {
+  @media (min-width: @desktop-width) {
     width: 161px;
     position: unset;
     top: 0;
     right: 0;
     padding: 185px 43px 42px 41px;
+  }
+}
+
+.promotion__description::before {
+  content: "";
+  background-image: url("../img/promotion__gift-icon.svg");
+  position: absolute;
+  width: 78px;
+  height: 80px;
+  top: -120px;
+  left: 40px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/promotion__gift-icon.svg");
+    width: 80px;
+    height: 82px;
+    top: -10px;
+    left: -350px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/promotion__gift-icon.svg");
+    width: 80px;
+    height: 82px;
+    top: 56px;
+    left: 85px;
   }
 }

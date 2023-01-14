@@ -4,6 +4,21 @@
   justify-content: space-between;
   padding: 26px 20px;
   background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 40px 56px;
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    padding: 60px 80px 56px;
+  }
 }
 
 .partnership__title {
@@ -14,7 +29,18 @@
   line-height: 20px;
   padding-right: 2px;
   width: 100%;
+  max-width: 260px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 172px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 87px;
+  }
 }
 
 .partnership__adress {
@@ -24,54 +50,39 @@
   font-size: 14px;
   line-height: 20px;
   width: 100%;
-}
+  max-width: 260px;
 
-.partnership__adress-img {
-  background-color: #7a7a7a;
-  width: 100%;
-}
-
-@media (min-width: @tablet-width) {
-  .partnership__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 60px 40px 56px;
-    background-color: #f2f2f2;
-  }
-
-  .partnership__title {
-    font-size: 20px;
-    line-height: 26px;
-    width: 172px;
-  }
-
-  .partnership__adress {
+  @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
     width: 160px;
     text-align: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 102px;
+    text-align: start;
+  }
+}
+
+.partnership__adress-img {
+  background-color: #7a7a7a;
+}
+
+.partnership iframe {
+  border: none;
+  display: block;
+  width: 100%;
+  background-color: #7a7a7a;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    display: block;
   }
 }
 
 @media (min-width: @desktop-width) {
   .partnership {
     position: relative;
-  }
-
-  .partnership__wrapper {
-    position: absolute;
-    top: 95px;
-    left: 110px;
-    padding: 60px 80px 56px;
-  }
-
-  .partnership__title {
-    padding-right: 87px;
-  }
-
-  .partnership__adress {
-    width: 102px;
-    text-align: start;
   }
 }

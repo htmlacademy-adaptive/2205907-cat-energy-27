@@ -13,23 +13,73 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 0 20px 0;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 58px 30px 55px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 57px 110px 58px;
+  }
+}
+
+.page-footer__item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.page-footer__item:not(:last-child) {
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .page-footer__item:first-child {
   padding: 39px 76px 32px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 146px 0 0;
+  }
 }
 
 .page-footer__item:not(:first-child):not(:last-child) {
   padding: 20px 70px 21px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding: 0 133px 0 0;
+  }
 }
 
 .page-footer__item:last-child {
+  width: 280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 0;
+  padding: 20px 0 40px 0;
+
+  @media (min-width: @tablet-width) {
+    width: unset;
+    // display: flex;
+    justify-content: unset;
+    padding: 0;
+
+    .page-footer__link {
+      padding-right: 23px;
+    }
+  }
 }
 
 .page-footer__link {
@@ -45,46 +95,17 @@
 .page-footer__item:last-child .page-footer__link {
   text-decoration: none;
   color: #000000;
-  padding-right: 141px;
+  padding-right: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 113px;
+    padding-right: 27px;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer__list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 58px 30px 55px;
-    margin: 0;
-  }
-
-  .page-footer__item:first-child {
-    padding: 0 155px 0 0;
-  }
-
-  .page-footer__item:not(:first-child):not(:last-child) {
-    padding: 0 133px 0 0;
-  }
-
-  .page-footer__item:last-child {
-    display: flex;
-    justify-content: unset;
-    padding: 0;
-  }
-
-  .page-footer__item:last-child .page-footer__link {
-    padding-right: 23px;
-  }
-
   .page-footer__logo-text {
     width: 128px;
     height: 24px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-footer__list {
-    padding: 57px 110px 58px;
   }
 }
