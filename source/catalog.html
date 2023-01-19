@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="./css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./img/favicon32x32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicon152.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -22,10 +26,10 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link main-nav__link--current" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Подбор программы</a>
@@ -40,10 +44,15 @@
       <h2 class="visually-hidden">Список доступных товаров</h2>
       <ul class="products__list">
         <li class="products__card">
-          <img class="products__img" src="./img/catalog-cards-img/catalog-1-desktop.png"
-            alt="Cat Energy PRO 500 г (Курица)">
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog-cards-img/catalog-1-desktop.png, ./img/catalog-cards-img/catalog-1-desktop@2x.png 2x"
+              width="163" height="174">
+            <img class="products__img" src="./img/catalog-cards-img/catalog-1-desktop.png" width="68" height="86"
+              alt="Cat Energy PRO 500 г (Курица)">
+          </picture>
           <div class="products__descritpion">
-            <h3 class="products__title">Cat Energy PRO 500 г</h3>
+            <h3 class="products__title">Cat Energy PRO 500 Г</h3>
             <table class="products__options">
               <tbody>
                 <tr>
@@ -64,10 +73,15 @@
           <button class="button products__order-button" type="button">Заказать</button>
         </li>
         <li class="products__card">
-          <img class="products__img products__img--large" src="./img/catalog-cards-img/catalog-2-desktop.png"
-            alt="Cat Energy PRO 1000 г (Рыба)">
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog-cards-img/catalog-2-desktop.png, ./img/catalog-cards-img/catalog-2-desktop@2x.png 2x"
+              width="168" height="206">
+            <img class="products__img products__img--large" src="./img/catalog-cards-img/catalog-2-desktop.png"
+              width="83" height="100" alt="Cat Energy PRO 1000 г (Рыба)">
+          </picture>
           <div class="products__descritpion">
-            <h3 class="products__title">Cat Energy PRO 1000 г</h3>
+            <h3 class="products__title">Cat Energy PRO 1000 Г</h3>
             <table class="products__options">
               <tbody>
                 <tr>
@@ -88,10 +102,15 @@
           <button class="button products__order-button" type="button">Заказать</button>
         </li>
         <li class="products__card">
-          <img class="products__img" src="./img/catalog-cards-img/catalog-3-desktop.png"
-            alt="Cat Energy PRO 500 г (Рыба)">
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog-cards-img/catalog-3-desktop.png, ./img/catalog-cards-img/catalog-3-desktop@2x.png 2x"
+              width="161" height="172">
+            <img class="products__img" src="./img/catalog-cards-img/catalog-3-desktop.png" width="68" height="86"
+              alt="Cat Energy PRO 500 г (Рыба)">
+          </picture>
           <div class="products__descritpion">
-            <h3 class="products__title">Cat Energy PRO 500 г</h3>
+            <h3 class="products__title">Cat Energy PRO 500 Г</h3>
             <table class="products__options">
               <tbody>
                 <tr>
@@ -112,10 +131,15 @@
           <button class="button products__order-button" type="button">Заказать</button>
         </li>
         <li class="products__card">
-          <img class="products__img products__img--large" src="./img/catalog-cards-img/catalog-4-desktop.png"
-            alt="Cat Energy PRO 1000 г (Рыба)">
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog-cards-img/catalog-4-desktop.png, ./img/catalog-cards-img/catalog-4-desktop@2x.png 2x"
+              width="168" height="200">
+            <img class="products__img products__img--large" src="./img/catalog-cards-img/catalog-4-desktop.png"
+              width="84" height="100" alt="Cat Energy PRO 1000 г (Рыба)">
+          </picture>
           <div class="products__descritpion">
-            <h3 class="products__title">Cat Energy PRO 1000 г</h3>
+            <h3 class="products__title">Cat Energy PRO 1000 Г</h3>
             <table class="products__options">
               <tbody>
                 <tr>
@@ -136,10 +160,15 @@
           <button class="button products__order-button" type="button">Заказать</button>
         </li>
         <li class="products__card">
-          <img class="products__img" src="./img/catalog-cards-img/catalog-5-desktop.png"
-            alt="Cat Energy SLIM 500 г (Гречка)">
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog-cards-img/catalog-5-desktop.png, ./img/catalog-cards-img/catalog-5-desktop@2x.png 2x"
+              width="161" height="171">
+            <img class="products__img" src="./img/catalog-cards-img/catalog-5-desktop.png" width="68" height="78"
+              alt="Cat Energy SLIM 500 г (Гречка)">
+          </picture>
           <div class="products__descritpion">
-            <h3 class="products__title">Cat Energy SLIM 500 г</h3>
+            <h3 class="products__title">Cat Energy SLIM 500 Г</h3>
             <table class="products__options">
               <tbody>
                 <tr>
@@ -160,10 +189,15 @@
           <button class="button products__order-button" type="button">Заказать</button>
         </li>
         <li class="products__card">
-          <img class="products__img products__img--large" src="./img/catalog-cards-img/catalog-6-desktop.png"
-            alt="Cat Energy SLIM 1000 г (Гречка)">
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog-cards-img/catalog-6-desktop.png, ./img/catalog-cards-img/catalog-6-desktop@2x.png 2x"
+              width="168" height="200">
+            <img class="products__img products__img--large" src="./img/catalog-cards-img/catalog-6-desktop.png"
+              width="84" height="100" alt="Cat Energy SLIM 1000 г (Гречка)">
+          </picture>
           <div class="products__descritpion">
-            <h3 class="products__title">Cat Energy PRO 1000 г</h3>
+            <h3 class="products__title">Cat Energy PRO 1000 Г</h3>
             <table class="products__options">
               <tbody>
                 <tr>
@@ -184,10 +218,15 @@
           <button class="button products__order-button" type="button">Заказать</button>
         </li>
         <li class="products__card">
-          <img class="products__img" src="./img/catalog-cards-img/catalog-7-desktop.png"
-            alt="Cat Energy SLIM 500 г (Рис)">
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog-cards-img/catalog-7-desktop.png, ./img/catalog-cards-img/catalog-7-desktop@2x.png 2x"
+              width="163" height="174">
+            <img class="products__img" src="./img/catalog-cards-img/catalog-7-desktop.png" width="72" height="84"
+              alt="Cat Energy SLIM 500 г (Рис)">
+          </picture>
           <div class="products__descritpion">
-            <h3 class="products__title">Cat Energy SLIM 500 г</h3>
+            <h3 class="products__title">Cat Energy SLIM 500 Г</h3>
             <table class="products__options">
               <tbody>
                 <tr>
