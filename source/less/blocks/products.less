@@ -43,11 +43,22 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 19px 0 25px;
-  border-top: 1px solid #ebebeb;
-  border-width: 140%;
+  // border-top: 1px solid #ebebeb;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #ebebeb;
+    height: 1px;
+    width: 768px;
+    top: 0;
+    left: -50%;
+  }
 
   @media (min-width: @tablet-width) {
-    width: 325px;
+    width: 324px;
     // height: 430px;
     display: flex;
     align-items: center;
@@ -55,6 +66,10 @@
     background-color: #f2f2f2;
     padding: 0 37px 39px;
     margin: 0;
+
+    &::before {
+      content: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -74,7 +89,7 @@
   @media (min-width: @tablet-width) {
     align-self: center;
     grid-area: img;
-    margin: -40px 0 0;
+    margin: -45px 0 0;
     padding: 0;
   }
 
@@ -150,7 +165,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 180px;
+    width: 170px;
   }
 }
 
@@ -180,10 +195,23 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #ebebeb;
+    height: 1px;
+    width: 768px;
+    top: 226px;
+    left: -50%;
+  }
 
   p {
     padding-bottom: 21px;
     font-family: "Lato Regular", sans-serif;
+    margin: 0;
   }
 
   @media (min-width: @tablet-width) {
@@ -193,6 +221,10 @@
     align-items: center;
     border: 2px solid #f2f2f2;
     background-color: @white;
+
+    &::after {
+      content: none;
+    }
 
     p {
       width: 165px;
@@ -218,9 +250,14 @@
 
   &::before {
     content: "";
+    background-image: url("../img/catalog_show-more-plus.svg");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
+    top: -55px;
+    left: 45%;
   }
 
   @media (min-width: @tablet-width) {
@@ -228,6 +265,18 @@
     font-size: 20px;
     line-height: 22px;
     width: 134px;
+
+    &::before {
+      content: "";
+      background-image: url("../img/catalog_show-more-plus.svg");
+      background-repeat: no-repeat;
+      background-size: 60px 60px;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 50px;
+      left: 35%;
+    }
   }
 }
 
@@ -237,6 +286,14 @@
   padding: 10px 94px;
   background-color: #f2f2f2;
   color: #000000;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: hsla(0, 0%, 0%, 0.308);
+  }
 
   @media (min-width: @tablet-width) {
     height: 40px;

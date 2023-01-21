@@ -47,6 +47,8 @@
 }
 
 .page-footer__item:first-child {
+  display: flex;
+  justify-content: flex-start;
   padding: 39px 76px 32px;
 
   @media (min-width: @tablet-width) {
@@ -59,6 +61,7 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    justify-content: flex-start;
     padding: 0 133px 0 0;
   }
 }
@@ -85,6 +88,16 @@
 .page-footer__link {
   text-decoration: none;
   padding: 0;
+
+  &:first-child {
+    &:hover {
+      opacity: 80%;
+    }
+
+    &:active {
+      opacity: 50%;
+    }
+  }
 }
 
 .page-footer__item:not(:first-child):not(:last-child) .page-footer__link:not(:last-child) {
@@ -107,5 +120,42 @@
   .page-footer__logo-text {
     width: 128px;
     height: 24px;
+  }
+}
+
+.page-footer__link-hmtlac {
+  &:hover {
+    color: #444444;
+  }
+
+  &:active {
+    color: #444444;
+    opacity: 30%;
+  }
+}
+
+.page-footer__link-academy {
+  color: #666666;
+
+  &:hover {
+    color: #68b738;
+  }
+
+  &:active {
+    color: #68b738;
+    opacity: 30%;
+  }
+}
+
+.page-footer__link-social {
+  color: #666666;
+
+  &:hover {
+    color: #68b738;
+  }
+
+  &:active {
+    color: #68b738;
+    opacity: 30%;
   }
 }

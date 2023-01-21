@@ -89,8 +89,9 @@
 
 .programs__loss::before {
   content: "";
-  background-image: url("../img/cat_back_loss.png");
+  background-image: url("../img/cat_back--loss.svg");
   background-repeat: no-repeat;
+  background-size: 50px 50px;
   width: 50px;
   height: 50px;
   position: absolute;
@@ -98,7 +99,7 @@
   top: -5px;
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/cat_back_loss--tab.png");
+    background-size: 200px 211px;
     width: 200px;
     height: 211px;
     left: 394px;
@@ -106,7 +107,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/cat_back_loss--desk.png");
+    background-size: 100px 106px;
     width: 100px;
     height: 106px;
     left: 0;
@@ -116,7 +117,7 @@
 
 .programs__gain::before {
   content: "";
-  background-image: url("../img/cat_back_gain.png");
+  background-image: url("../img/cat_back--gain.svg");
   background-repeat: no-repeat;
   width: 67px;
   height: 50px;
@@ -125,7 +126,7 @@
   position: absolute;
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/cat_back_gain--tab.png");
+    background-size: 268px 200px;
     width: 268px;
     height: 200px;
     left: 360px;
@@ -133,9 +134,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/cat_back_gain--desk.png");
+    background-size: 134px 100px;
     width: 134px;
-    height: 200px;
+    height: 100px;
     left: -15px;
     top: -35px;
   }
@@ -181,6 +182,14 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
 
   @media (min-width: @tablet-width) {
