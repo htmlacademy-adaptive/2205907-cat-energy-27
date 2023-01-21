@@ -366,12 +366,15 @@
 }
 .page-footer__item:first-child {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 39px 76px 32px;
+  align-items: center;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .page-footer__item:first-child {
     padding: 0 146px 0 0;
+    justify-content: flex-start;
   }
 }
 .page-footer__item:not(:first-child):not(:last-child) {
@@ -619,7 +622,6 @@
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .intro {
-    width: 320px;
     height: 302px;
     background-size: 180%;
     background-position: bottom 0%;
