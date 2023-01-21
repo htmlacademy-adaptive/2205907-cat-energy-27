@@ -473,7 +473,7 @@
   background-color: #5eaa2f;
 }
 .button:active {
-  color: hsla(0, 0%, 100%, 0.308);
+  color: rgba(255, 255, 255, 0.31);
 }
 .radios li:not(:last-child) {
   padding-bottom: 25px;
@@ -1198,13 +1198,13 @@
 }
 @media (min-width: 768px) {
   .examples {
-    background-image: linear-gradient(#fff 56%, #eaeaea 56% 100%);
+    background-image: linear-gradient(#ffffff 56%, #eaeaea 56% 100%);
     padding: 43px 30px 101px;
   }
 }
 @media (min-width: 1440px) {
   .examples {
-    background-image: linear-gradient(#fff 23%, #eaeaea 23% 77%);
+    background-image: linear-gradient(#ffffff 23%, #eaeaea 23% 77%);
     padding: 25px 110px 40px;
     display: flex;
   }
@@ -1360,7 +1360,7 @@
     line-height: 14px;
     padding: 0 10px;
     width: auto;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 }
 @media (min-width: 1440px) {
@@ -2290,7 +2290,7 @@
   background-color: #ebebeb;
 }
 .products__more-button:active {
-  color: hsla(0, 0%, 0%, 0.308);
+  color: hsla(0, 0%, 0%, 0.31);
 }
 @media (min-width: 768px) {
   .products__more-button {
