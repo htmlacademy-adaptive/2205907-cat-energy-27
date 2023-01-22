@@ -620,7 +620,6 @@
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .intro {
-    height: 302px;
     background-size: 180%;
     background-position: bottom 0%;
     background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/intro-bg@2x.jpg");
@@ -661,7 +660,6 @@
 }
 @media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
   .intro::before {
-    width: 48%;
     background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/intro-bg@2x.jpg");
   }
 }
@@ -769,13 +767,6 @@
     padding: 14px 30px 14px 38px;
     font-size: 20px;
     line-height: 20px;
-  }
-}
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
-  .programs__button {
-    top: -42px;
-    position: relative;
-    margin: 0 0 526px 90px;
   }
 }
 @media (min-width: 1440px) {
@@ -1209,6 +1200,7 @@
   background-color: #eaeaea;
   background-size: 50%;
   padding: 25px 20px 40px;
+  border: none;
 }
 @media (min-width: 768px) {
   .examples {
