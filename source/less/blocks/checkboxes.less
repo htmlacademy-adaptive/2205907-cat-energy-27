@@ -20,7 +20,7 @@
   content: "";
   width: 30px;
   height: 30px;
-  outline: 1px solid rgba(205, 205, 205, 1);
+  outline: 1px solid #cdcdcd;
   position: absolute;
   background-color: @white;
   top: -6px;
@@ -32,6 +32,19 @@
     outline: 1px solid #cdcdcd;
     top: -4px;
   }
+}
+
+.checkboxes__input:hover + .checkboxes__label::before {
+  outline: 1px solid #bababa;
+}
+
+.checkboxes__input:disabled + .checkboxes__label::before {
+  outline: 1px solid #a8a8a8;
+  opacity: 30%;
+}
+
+.checkboxes__input:disabled + .checkboxes__label {
+  opacity: 30%;
 }
 
 .checkboxes__input:checked + .checkboxes__label::before {

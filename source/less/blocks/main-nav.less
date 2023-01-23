@@ -1,12 +1,13 @@
 .main-nav {
   // display: none;
-  position: fixed;
+  position: absolute;
   left: 0;
   justify-content: center;
   width: 100%;
   background-color: @white;
   top: 65px;
   border-top: 1px solid #e6e6e6;
+  z-index: 1;
 
   &--closed {
     display: none;
@@ -21,6 +22,10 @@
     display: unset;
     border: none;
     top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: transparent;
   }
 }
 
@@ -41,14 +46,28 @@
 }
 
 .main-nav__item {
+  box-sizing: border-box;
   padding: 22px 0 24px 0;
   text-align: center;
   border-bottom: 1px solid #e6e6e6;
+  z-index: 0;
 
   @media (min-width: @tablet-width) {
     padding: 0;
     padding-right: 35px;
     border-bottom: none;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    z-index: 1;
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 }
 
@@ -77,10 +96,33 @@
       position: absolute;
       bottom: -10px;
     }
+
+    &:hover {
+      opacity: 70%;
+    }
+
+    &:disabled {
+      opacity: 50%;
+    }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
+    color: #000000;
+
+    &--white {
+      color: #ffffff;
+      position: relative;
+    }
+
+    &--white--current::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #ffffff;
+      position: absolute;
+      bottom: -10px;
+    }
   }
 }

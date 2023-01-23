@@ -47,14 +47,21 @@
   }
 }
 
+.header__logo-img {
+  @media (min-width: @desktop-width) {
+    &:hover {
+      opacity: 80%;
+    }
+
+    &:active {
+      opacity: 65%;
+    }
+  }
+}
+
 @media (min-width: @desktop-width) {
   .header {
     padding: 53px 110px 73px;
-  }
-
-  .header__logo-img {
-    height: 60px;
-    width: 60px;
   }
 
   .header__logo-text {

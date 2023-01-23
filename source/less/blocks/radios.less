@@ -2,7 +2,7 @@
   padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 30px;
+    padding-bottom: 23px;
   }
 }
 
@@ -28,7 +28,7 @@
   content: "";
   width: 30px;
   height: 30px;
-  outline: 1px solid rgba(205, 205, 205, 1);
+  outline: 1px solid #cdcdcd;
   border-radius: 50%;
   position: absolute;
   background: @white;
@@ -38,9 +38,21 @@
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
-    bottom: -10px;
+    bottom: -6px;
     left: 3px;
   }
+}
+
+.radios__input:hover + .radios__label::before {
+  outline: 1px solid #bababa;
+}
+
+.radios__input:disabled + .radios__label::before {
+  opacity: 30%;
+}
+
+.radios__input:disabled + .radios__label {
+  opacity: 30%;
 }
 
 .radios__input + .radios__label::after {
@@ -58,7 +70,7 @@
     width: 18px;
     height: 18px;
     left: 14px;
-    bottom: 1px;
+    bottom: 4px;
   }
 }
 

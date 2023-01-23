@@ -1,12 +1,29 @@
 .advantages {
   padding: 20px;
+  overflow-x: hidden;
 
   @media (min-width: @tablet-width) {
     padding: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: #ebebeb;
+      height: 1px;
+      width: 1000%;
+      bottom: 0;
+      left: -50%;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 110px 68px;
+
+    &::before {
+      content: none;
+    }
   }
 }
 
@@ -28,6 +45,7 @@
 .advantages__list {
   list-style-type: none;
   padding: 0;
+  margin: 0 0 17px 0;
   text-align: left;
   max-width: 325px;
 
@@ -162,7 +180,8 @@
 .advantages__nutrients {
   &::before {
     content: "";
-    background-image: url("../img/advantages__nutrients.png");
+    background-image: url("../img/advantages_nutrients.svg");
+    background-size: 60px 60px;
     width: 60px;
     height: 60px;
     position: absolute;
@@ -172,7 +191,7 @@
 
   @media (min-width: @tablet-width) {
     &::before {
-      background-image: url("../img/advantages__nutrients--desk.png");
+      background-size: 80px 80px;
       width: 80px;
       height: 80px;
       left: 0;
@@ -184,7 +203,8 @@
 .advantages__consistency {
   &::before {
     content: "";
-    background-image: url("../img/advantages__consistency.png");
+    background-image: url("../img/advantages__consistency.svg");
+    background-size: 60px 60px;
     width: 60px;
     height: 60px;
     position: absolute;
@@ -196,7 +216,7 @@
     width: 224px;
 
     &::before {
-      background-image: url("../img/advantages__consistency--desk.png");
+      background-size: 80px 80px;
       width: 80px;
       height: 80px;
       left: 0;
@@ -208,7 +228,8 @@
 .advantages__meal {
   &::before {
     content: "";
-    background-image: url("../img/advantages__meal.png");
+    background-image: url("../img/advantages__meal.svg");
+    background-size: 60px 60px;
     width: 60px;
     height: 60px;
     position: absolute;
@@ -218,7 +239,7 @@
 
   @media (min-width: @tablet-width) {
     &::before {
-      background-image: url("../img/advantages__meal--desk.png");
+      background-size: 80px 80px;
       width: 80px;
       height: 80px;
       left: 0;
@@ -230,7 +251,8 @@
 .advantages__duration {
   &::before {
     content: "";
-    background-image: url("../img/advantages__duration.png");
+    background-image: url("../img/advantages__duration.svg");
+    background-size: 60px 60px;
     width: 60px;
     height: 60px;
     position: absolute;
@@ -244,7 +266,7 @@
     }
 
     &::before {
-      background-image: url("../img/advantages__duration--desk.png");
+      background-size: 80px 80px;
       width: 80px;
       height: 80px;
       left: 0;
