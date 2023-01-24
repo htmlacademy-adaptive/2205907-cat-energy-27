@@ -3,14 +3,22 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 26px 20px;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
+
+  &--grey-bg {
+    background-color: #f2f2f2;
+  }
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 60px 40px 56px;
-    background-color: #f2f2f2;
+    padding: 60px 70px 60px;
+    background-color: #ffffff;
+
+    &--grey-bg {
+      background-color: #f2f2f2;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -18,6 +26,10 @@
     top: 95px;
     left: 110px;
     padding: 60px 80px 56px;
+
+    &--grey-bg {
+      background-color: #ffffff;
+    }
   }
 }
 
@@ -78,6 +90,7 @@
   @media (min-width: @tablet-width) {
     border: none;
     display: block;
+    height: 400px;
   }
 }
 

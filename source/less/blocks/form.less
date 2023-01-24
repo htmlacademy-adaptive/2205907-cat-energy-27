@@ -30,7 +30,7 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding: 0 70px 66px;
+    padding: 0 70px 64px;
     font-size: 20px;
     line-height: 30px;
     width: 323px;
@@ -108,6 +108,30 @@
 
 .form__pet-label {
   padding-right: 13px;
+
+  &--mid-long {
+    width: 86px;
+  }
+
+  &--long {
+    width: 166px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--mid-long {
+      width: 88px;
+    }
+
+    &--long {
+      width: 159px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--mid-long {
+      width: 90px;
+    }
+  }
 }
 
 .form__pet-input {
@@ -233,7 +257,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 76px;
+    padding-bottom: 65px;
 
     .form__title {
       padding: 26px 0 76px;
@@ -245,7 +269,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 76px;
+    padding-bottom: 67px;
 
     .form__title {
       padding: 26px 0 76px;
@@ -282,21 +306,29 @@
 
 .form__mail-label,
 .form__tel-label {
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 .form__mail-input {
   background-image: url("../img/email-stroke.svg");
   background-size: 20px 20px;
   background-repeat: no-repeat;
-  background-position: 96% 50%;
+  background-position: 93% 50%;
+
+  @media (min-width: @tablet-width) {
+    background-position: 97% 48%;
+  }
 }
 
 .form__tel-input {
   background-image: url("../img/phone-stroke.svg");
   background-size: 20px 20px;
   background-repeat: no-repeat;
-  background-position: 96% 50%;
+  background-position: 92% 50%;
+
+  @media (min-width: @tablet-width) {
+    background-position: 97% 48%;
+  }
 }
 
 .form__mail-input,
@@ -389,7 +421,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 76px;
+    padding-bottom: 60px;
 
     .form__title {
       padding-bottom: 76px;
@@ -477,7 +509,7 @@
 }
 
 .form__field-group--checkboxes {
-  padding-bottom: 40px;
+  padding-bottom: 54px;
 
   .form__title {
     padding-bottom: 40px;
@@ -554,7 +586,7 @@
   font-size: 14px;
   line-height: 16px;
   margin: 0;
-  padding: 21px 0 32px;
+  padding: 21px 0 36px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -582,7 +614,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
-    padding-bottom: 72px;
+    padding-bottom: 78px;
     align-items: center;
 
     p {
@@ -593,7 +625,7 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    padding-bottom: 72px;
+    padding-bottom: 90px;
 
     p {
       font-size: 16px;
