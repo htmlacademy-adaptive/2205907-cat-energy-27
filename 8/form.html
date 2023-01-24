@@ -6,8 +6,8 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link href="./css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="./img/favicon32x32.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./img/favicon152.png">
+  <link rel="icon" href="img/favicon32x32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon152.png">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="https://htmlacademy-adaptive.github.io/2205907-cat-energy-27/8/">
@@ -48,7 +48,8 @@
           alt="Логотип компании Cat energy">
       </picture>
     </a>
-    <img class="header__logo-text" src="./img/logo-text.svg" alt="Текстовый логотип компании Cat energy">
+    <img class="header__logo-text" src="./img/logo-text.svg" width="101" height="18"
+      alt="Текстовый логотип компании Cat energy">
     <button class="header__nav-toogle" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
@@ -70,8 +71,7 @@
   </header>
   <main class="form form-page">
     <h1 class="form-page__title">Подбор программы</h1>
-    <h2 class="form__description">Заполните анкету, и мы подберем
-      программу питания для вашего кота</h2>
+    <h2 class="form__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</h2>
     <form class="program-form form" action="https://echo.htmlacademy.ru/" method="post">
       <div class="program-form__wrapper">
         <section class="form__field-group form__field-group--pet">
@@ -82,12 +82,12 @@
               <input class="form__pet-input" type="text" id="pet-name" placeholder="Введите имя кота" required>
             </li>
             <li>
-              <label class="form__pet-label" for="pet-weight">Вес:*</label>
+              <label class="form__pet-label form__pet-label--mid-long" for="pet-weight">Вес (кг):*</label>
               <input class="form__pet-input" type="number" id="pet-weight" min="1" max="100"
                 placeholder="Введите вес кота" required>
             </li>
             <li>
-              <label class="form__pet-label" for="pet-age">Возраст:</label>
+              <label class="form__pet-label form__pet-label--long" for="pet-age">Возраст (лет):</label>
               <input class="form__pet-input" type="number" id="pet-age" min="1" max="100"
                 placeholder="Введите возраст кота" required>
             </li>
@@ -158,8 +158,8 @@
   </main>
   <footer class="page-footer">
     <section class="page-footer__partnership partnership">
-      <div class="partnership__wrapper">
-        <h2 class="partnership__title partnership__title--small">Приглашаем к сотрудничеству дилеров!</h2>
+      <div class="partnership__wrapper partnership__wrapper--grey-bg">
+        <h2 class="partnership__title partnership__title--small">Приглашаем<br>к сотрудничеству дилеров!</h2>
         <p class="partnership__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
       <iframe
@@ -171,7 +171,14 @@
     <ul class="page-footer__list">
       <li class="page-footer__item">
         <a class="page-footer__link" href="#top">
-          <img src="./img/logo-text.svg" alt="Текстовый логотип компании Cat energy">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="./img/logo-text--tab.svg" width="143" height="26"
+              type="image/svg+xml">
+            <source media="(min-width: 768px)" srcset="./img/logo-text--tab.svg" width="143" height="26"
+              type="image/svg+xml">
+            <img class="page-footer__logo-text" src="./img/logo-text.svg" width="128" height="24"
+              alt="Текстовый логотип компании Cat energy">
+          </picture>
         </a>
       </li>
       <li class="page-footer__item">
