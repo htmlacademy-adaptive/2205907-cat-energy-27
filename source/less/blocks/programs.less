@@ -1,13 +1,18 @@
 .programs {
   padding: 0 20px 0 20px;
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
+    width: 768px;
+    box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
     padding: 134px 110px 72px;
-    margin: 0 auto;
+    width: 1440px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
@@ -16,7 +21,7 @@
 
 .programs__button {
   margin: 0 auto 20px auto;
-  padding: 7px 70px 7px 70px;
+  padding: 8px 40px 8px 40px;
   max-width: 100%;
   text-align: center;
 
@@ -65,7 +70,7 @@
 }
 
 .programs__title {
-  font-family: "Oswald Regular", sans-serif;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
@@ -98,8 +103,8 @@
     width: 50px;
     height: 50px;
     position: absolute;
-    left: 0;
-    top: -5px;
+    left: 3px;
+    top: -6px;
 
     @media (min-width: @tablet-width) {
       background-size: 200px 211px;
@@ -114,7 +119,7 @@
       width: 100px;
       height: 106px;
       left: 0;
-      top: -35px;
+      top: -40px;
     }
   }
 }
@@ -128,7 +133,7 @@
     background-repeat: no-repeat;
     width: 67px;
     height: 50px;
-    left: -8px;
+    left: -6px;
     top: -5px;
     position: absolute;
 
@@ -144,7 +149,7 @@
       background-size: 134px 100px;
       width: 134px;
       height: 100px;
-      left: -15px;
+      left: -20px;
       top: -35px;
     }
   }
@@ -152,7 +157,7 @@
 
 
 .programs__description {
-  font-family: "Lato Regular", sans-serif;
+  font-family: "Lato Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -177,10 +182,11 @@
 .programs__description::before {
   content: "";
   background-image: url("../img/programs__line-img.svg");
-  width: 100%;
+  width: calc(100% + 15px);
   height: 1px;
   position: absolute;
   bottom: 20px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     content: none;
@@ -188,7 +194,7 @@
 }
 
 .programs__catalog-link {
-  font-family: "Oswald Regular", sans-serif;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;

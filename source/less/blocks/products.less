@@ -1,12 +1,12 @@
 .products__list {
-  margin: 0;
+  margin: 0 0 25px 0;
   padding: 0;
   list-style-type: none;
   display: flex;
   align-items: center;
 
   @media (min-width: 320px) {
-    margin: 0;
+    margin: 0 0 27px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +20,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 137px 60px;
+    gap: 140px 60px;
     padding-bottom: 68px;
   }
 
@@ -28,8 +28,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 140px 80px;
-    padding-bottom: 80px;
+    gap: 146px 80px;
+    padding-bottom: 52px;
   }
 }
 
@@ -90,8 +90,7 @@
 
 .products__img {
   grid-area: img;
-  // padding: 0 32px 0 32px;
-  // // margin-top: -10px;
+  margin: -4px 0 0;
   width: 100%;
   object-fit: contain;
   object-position: center;
@@ -99,7 +98,7 @@
   @media (min-width: @tablet-width) {
     align-self: center;
     grid-area: img;
-    margin: -54px 0 0;
+    margin: -43px 0 0;
     padding: 0;
   }
 
@@ -111,13 +110,13 @@
 .products__img--large {
   grid-area: img;
   // padding: 0 28px 0;
-  // margin-top: 0;
+  margin: 2px 0 0;
   width: 100%;
   object-fit: contain;
   object-position: center;
 
   @media (min-width: @tablet-width) {
-    margin: -82px 0 0;
+    margin: -71px 0 0;
     padding: 0;
   }
 
@@ -132,15 +131,25 @@
   justify-content: flex-start;
 }
 
-.products__title {
+.products__title-link {
+  display: flex;
+  justify-content: center;
   grid-area: title;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  margin: 0;
+}
+
+.products__title {
   width: 80px;
-  font-family: "Oswald Regular", sans-serif;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  margin: 0;
+  margin: 0 60px 0 0;
   padding-bottom: 14px;
+  text-align: left;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
@@ -154,18 +163,18 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 42px;
+    padding-top: 35px;
   }
 }
 
 .products__options {
   grid-area: features;
   height: 44px;
-  font-family: "Lato Regular", sans-serif;
+  font-family: "Lato Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 12px;
   width: 140px;
-  margin-bottom: 21px;
+  margin-bottom: 22px;
 
   td {
     padding: 0;
@@ -193,11 +202,27 @@
   }
 }
 
-.products__order-button {
+.products__order-link {
   grid-area: order;
   font-size: 16px;
   line-height: 20px;
   padding: 10px 109px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @white;
+  background-color: @button-color;
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-weight: 400;
+  border: none;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.31);
+  }
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
@@ -216,11 +241,12 @@
 }
 
 .products__card--extra {
-  padding: 78px 0 25px;
+  padding: 77px 0 25px;
   display: flex;
   flex-direction: column;
   text-align: center;
   position: relative;
+  margin: 0;
 
   &::after {
     content: "";
@@ -229,14 +255,16 @@
     background-color: #ebebeb;
     height: 1px;
     width: 768px;
-    top: 226px;
+    top: 100%;
     left: -50%;
   }
 
   p {
     padding-bottom: 21px;
-    font-family: "Lato Regular", sans-serif;
+    font-family: "Lato Regular", "Arial", sans-serif;
     margin: 0;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   @media (min-width: @tablet-width) {
@@ -266,11 +294,11 @@
 
 .products__title-extra {
   margin: 0;
-  font-family: "Oswald Regular", sans-serif;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  padding-bottom: 8px;
+  padding-bottom: 9px;
   position: relative;
   text-transform: uppercase;
 
@@ -306,7 +334,7 @@
   }
 }
 
-.products__more-button {
+.products__more-link {
   font-size: 16px;
   line-height: 20px;
   padding: 10px 94px;
@@ -327,6 +355,7 @@
     line-height: 20px;
     padding: 10px 70px;
     width: 248px;
+    box-sizing: border-box;
     background-color: #f2f2f2;
     color: #000000;
     margin-bottom: 38px;
@@ -335,7 +364,7 @@
   @media (min-width: @desktop-width) {
     padding: 10px 39px;
     width: auto;
-    margin-bottom: 38px;
+    margin-bottom: 58px;
   }
 }
 

@@ -1,5 +1,5 @@
 .form {
-  font-family: "Oswald Regular", sans-serif;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
 }
@@ -22,7 +22,8 @@
 }
 
 .form__description {
-  margin: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 0 20px 39px;
   font-size: 14px;
   line-height: 18px;
@@ -30,15 +31,15 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding: 0 70px 64px;
+    padding: 0 70px 59px;
     font-size: 20px;
     line-height: 30px;
-    width: 323px;
+    width: 768px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px 66px;
-    width: 323px;
+    padding: 0 110px 63px;
+    width: 1440px;
   }
 }
 
@@ -67,7 +68,7 @@
 }
 // FIRST SECTION
 .form__field-group--pet {
-  padding-bottom: 24px;
+  padding: 2px 0 24px 0;
   position: relative;
 
   &::before {
@@ -86,7 +87,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 0 72px 0;
+    padding: 4px 0 72px 0;
 
     &::before {
       content: none;
@@ -98,7 +99,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
+    padding: 2px 0 0 0;
 
     li:not(:last-child) {
       padding-bottom: 20px;
@@ -137,22 +138,23 @@
 .form__pet-input {
   box-sizing: border-box;
   height: 45px;
-  padding: 14px 20px 13px;
-  font-family: "Oswald Regular", sans-serif;
+  padding: 15px 20px 13px;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: rgba(68, 68, 68, 1);
   text-transform: uppercase;
-  border: 1px solid #e7e7e7;
+  outline: 1px solid #e7e7e7;
+  border: none;
   width: 100%;
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    outline: 1px solid #cdcdcd;
   }
 
   &:focus {
-    border: 2px solid #444444;
+    outline: 2px solid #444444;
   }
 
   @media (min-width: @tablet-width) {
@@ -170,6 +172,10 @@
     line-height: 30px;
     border: 1px solid #e7e7e7;
   }
+}
+
+input[type="number"] {
+  appearance: textfield;
 }
 
 // .form__pet-input::-webkit-outer-spin-button,
@@ -269,7 +275,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 67px;
+    padding-bottom: 47px;
 
     .form__title {
       padding: 26px 0 76px;
@@ -282,12 +288,8 @@
       align-items: center;
     }
 
-    li:first-child {
-      padding: 0;
-    }
-
-    li:not(:last-child) {
-      padding-bottom: 0;
+    li {
+      padding-bottom: 20px;
     }
   }
 }
@@ -300,7 +302,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 75px;
+    width: 76px;
   }
 }
 
@@ -335,32 +337,33 @@
 .form__tel-input {
   box-sizing: border-box;
   height: 45px;
-  padding: 14px 15px 13px;
-  font-family: "Oswald Regular", sans-serif;
+  padding: 14px 50px 13px 15px;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: rgba(68, 68, 68, 1);
   text-transform: uppercase;
-  border: 1px solid #e7e7e7;
+  border: none;
+  outline: 1px solid #e7e7e7;
   width: 100%;
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    outline: 1px solid #cdcdcd;
   }
 
   &:focus {
-    border: 2px solid #444444;
+    outline: 2px solid #444444;
   }
 
   &:invalid {
-    border: 2px solid #ff8282;
+    outline: 2px solid #ff8282;
   }
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
     height: 52px;
-    padding: 11px 20px;
+    padding: 11px 50px 11px 20px;
     font-size: 20px;
     line-height: 30px;
     color: #444444;
@@ -369,7 +372,6 @@
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
     height: 52px;
-    padding: 11px 20px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -432,23 +434,24 @@
 .form__textarea {
   box-sizing: border-box;
   padding: 9px 15px;
-  font-family: "Oswald Regular", sans-serif;
+  font-family: "Oswald Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: rgba(68, 68, 68, 1);
   text-transform: uppercase;
-  border: 1px solid rgba(231, 231, 231, 1);
+  border: none;
+  outline: 1px solid rgba(231, 231, 231, 1);
   width: 100%;
   height: 150px;
   resize: none;
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    outline: 1px solid #cdcdcd;
   }
 
   &:focus {
-    border: 2px solid #444444;
+    outline: 2px solid #444444;
   }
 
 
@@ -537,7 +540,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 61px;
+    padding-bottom: 65px;
 
     .form__title {
       padding-bottom: 62px;
@@ -547,6 +550,8 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      flex-wrap: wrap;
+      column-gap: unset;
     }
 
     li:not(:last-child) {
@@ -581,7 +586,7 @@
 }
 
 .form__required-mark {
-  font-family: "Lato Regular", sans-serif;
+  font-family: "Lato Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
