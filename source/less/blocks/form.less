@@ -295,7 +295,7 @@ input[type="number"] {
 }
 
 .form__mail-label {
-  width: 67px;
+  width: 74px;
 
   @media (min-width: @tablet-width) {
     width: 75px;
@@ -308,7 +308,11 @@ input[type="number"] {
 
 .form__mail-label,
 .form__tel-label {
-  padding-right: 20px;
+  padding-right: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 20px;
+  }
 }
 
 .form__mail-input {
@@ -512,10 +516,10 @@ input[type="number"] {
 }
 
 .form__field-group--checkboxes {
-  padding-bottom: 54px;
+  padding-bottom: 38px;
 
   .form__title {
-    padding-bottom: 40px;
+    padding-bottom: 38px;
   }
 
   li:not(:last-child) {
@@ -523,6 +527,8 @@ input[type="number"] {
   }
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 59px;
+
     .form__title {
       padding-bottom: 62px;
     }
@@ -547,11 +553,16 @@ input[type="number"] {
     }
 
     .form__list {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      flex-wrap: wrap;
+      // display: flex;
+      // flex-direction: row;
+      // align-items: center;
+      // flex-wrap: wrap;
+      // column-gap: unset;
+
+      display: grid;
+      grid-template-columns: 325px 325px 325px 245px;
       column-gap: unset;
+      row-gap: 50px;
     }
 
     li:not(:last-child) {
@@ -562,9 +573,10 @@ input[type="number"] {
 
 .form__submit-button {
   width: 280px;
-  padding: 7px 44px;
+  padding: 10px 44px;
   font-size: 16px;
   line-height: 20px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 282px;
