@@ -1,6 +1,7 @@
 (function () {
   let navToogle = document.querySelector('.header__nav-toogle');
   let navMain = document.querySelector('.main-nav');
+  navMain.classList.remove('main-nav--nojs');
   navToogle.addEventListener('click', () => {
     if (navMain.classList.contains('main-nav--closed')) {
       navToogle.classList.toggle('header__nav-toogle--active');
